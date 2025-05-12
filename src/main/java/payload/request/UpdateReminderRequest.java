@@ -2,10 +2,10 @@ package payload.request;
 
 import domain.enums.ReminderMethod;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 
 public record UpdateReminderRequest(
-    Instant reminderTime,
+    LocalDateTime reminderTime,
     ReminderMethod method,
     Boolean sent
 ) {}

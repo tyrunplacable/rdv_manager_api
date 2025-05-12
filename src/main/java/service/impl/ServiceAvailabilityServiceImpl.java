@@ -23,9 +23,10 @@ public class ServiceAvailabilityServiceImpl implements ServiceAvailabilityServic
 
     @Override
     @Transactional
-    public ServiceAvailabilityResponse create(CreateServiceAvailabilityRequest request) {
+    public ServiceAvailabilityResponse create(UUID serviceId, CreateServiceAvailabilityRequest request) {
         ServiceAvailability entity = mapper.toEntity(request);
         entity.setId(UUID.randomUUID());
+        entity.setServiceId(serviceId);             // link to parent Service
         ServiceAvailability saved = repository.save(entity);
         return mapper.toResponse(saved);
     }
@@ -38,8 +39,8 @@ public class ServiceAvailabilityServiceImpl implements ServiceAvailabilityServic
     }
 
     @Override
-    public List<ServiceAvailabilityResponse> getAll() {
-        return mapper.toResponseList(repository.findAll());
+    public List<ServiceAvailabilityResponse> getByServiceId(UUID serviceId) {
+        return mapper.toResponseList(repository.findByServiceId(serviceId));
     }
 
     @Override
