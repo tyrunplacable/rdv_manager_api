@@ -1,6 +1,8 @@
 package payload.request;
 
-import jakarta.validation.constraints.NotBlank;
+import java.time.LocalTime;
+import java.util.UUID;
+
 import jakarta.validation.constraints.NotNull;
 
 public record CreateServiceAvailabilityRequest(
