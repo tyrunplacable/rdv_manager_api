@@ -21,7 +21,7 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Service {
+public class ServiceEntity {
     @Id
     private UUID id;
 
