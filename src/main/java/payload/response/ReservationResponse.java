@@ -1,6 +1,6 @@
 package payload.response;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public record ReservationResponse(
@@ -8,6 +8,6 @@ public record ReservationResponse(
     UUID clientId,
     UUID slotId,
     String status,
-    Instant createdAt,
-    Instant updatedAt
+    LocalDateTime createdAt,
+    LocalDateTime updatedAt
 ) {}

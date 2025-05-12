@@ -1,6 +1,6 @@
 package payload.response;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public record StructureResponse(
@@ -11,6 +11,6 @@ public record StructureResponse(
         String phone,
         String email,
         String timezone,
-        Instant createdAt,
-        Instant updatedAt
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
         ) {}

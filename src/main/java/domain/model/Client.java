@@ -11,7 +11,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -34,8 +34,8 @@ public class Client {
     private UUID structureId; // Only for ADMIN and STAFF; null for CLIENT role
 
     @CreatedDate
-    private Instant createdAt;
+    private LocalDateTime createdAt;
     @LastModifiedDate
-    private Instant updatedAt;
+    private LocalDateTime updatedAt;
 }
 

@@ -1,6 +1,6 @@
 package payload.response;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -12,6 +12,6 @@ public record ClientResponse(
         String phone,
         List<String> roles,
         UUID structureId,
-        Instant createdAt,
-        Instant updatedAt
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
         ) {}

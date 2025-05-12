@@ -1,6 +1,6 @@
 package payload.response;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.UUID;
 
@@ -10,6 +10,6 @@ public record ServiceAvailabilityResponse(
         String dayOfWeek,
         LocalTime startTime,
         LocalTime endTime,
-        Instant createdAt,
-        Instant updatedAt
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
         ) {}

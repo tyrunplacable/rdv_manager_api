@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 /**
@@ -26,6 +26,6 @@ public class AuditLog {
     private UUID entityId;
     private String action;
     private String performedBy;
-    private Instant timestamp;
+    private LocalDateTime timestamp;
     private String details;
 }

@@ -10,7 +10,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 /**
@@ -28,12 +28,12 @@ public class Reminder {
     /** Reference to the Reservation */
     private UUID reservationId;
 
-    private Instant reminderTime;
+    private LocalDateTime reminderTime;
     private ReminderMethod method;
     private boolean sent;
 
     @CreatedDate
-    private Instant createdAt;
+    private LocalDateTime createdAt;
     @LastModifiedDate
-    private Instant updatedAt;
+    private LocalDateTime updatedAt;
 }
