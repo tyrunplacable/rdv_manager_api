@@ -1,0 +1,120 @@
+@startuml
+
+' Entities for Appointment Management API (Updated)
+package "Domain Models" {
+
+    class Structure {
+        + UUID id
+        + String name
+        + String description
+        + String address
+        + String phone
+        + String email
+        + String timezone
+        + DateTime createdAt
+        + DateTime updatedAt
+    }
+
+    class Service {
+        + UUID id
+        + UUID structureId
+        + String name
+        + String description
+        + String timezone
+        + DateTime createdAt
+        + DateTime updatedAt
+    }
+
+    class ServiceAvailability {
+        + UUID id
+        + UUID serviceId
+        + DayOfWeek dayOfWeek  ' MONDAY..SUNDAY
+        + LocalTime startTime
+        + LocalTime endTime
+        + DateTime createdAt
+        + DateTime updatedAt
+    }
+
+    class Slot {
+        + UUID id
+        + LocalDate date
+        + LocalTime startTime
+        + LocalTime endTime
+        + int capacity
+        + int available
+        + UUID serviceId
+        + DateTime createdAt
+        + DateTime updatedAt
+    }
+
+    class Client {
+        + UUID id
+        + String firstName
+        + String lastName
+        + String email
+        + String phone
+        + String passwordHash
+        + List<Role> roles
+        + DateTime createdAt
+        + DateTime updatedAt
+    }
+
+    class Reservation {
+        + UUID id
+        + UUID clientId
+        + UUID slotId
+        + ReservationStatus status
+        + DateTime createdAt
+        + DateTime updatedAt
+    }
+
+    class Reminder {
+        + UUID id
+        + UUID reservationId
+        + DateTime reminderTime
+        + ReminderMethod method  ' EMAIL, SMS
+        + Boolean sent
+        + DateTime createdAt
+        + DateTime updatedAt
+    }
+
+    class AuditLog {
+        + UUID id
+        + String entityName
+        + UUID entityId
+        + String action     ' CREATE, UPDATE, DELETE
+        + String performedBy
+        + DateTime timestamp
+        + String details    ' JSON diff or description
+    }
+
+    enum ReservationStatus {
+        CONFIRMED
+        PENDING
+        CANCELLED
+    }
+
+    enum Role {
+        ADMIN
+        STAFF
+        CLIENT
+    }
+
+    enum ReminderMethod {
+        EMAIL
+        SMS
+    }
+}
+
+' Relationships
+Structure "1" -- "*" Service : offers >
+Service "1" -- "*" ServiceAvailability : schedules >
+Service "1" -- "*" Slot : provides >
+Slot "1" -- "*" Reservation : contains >
+Client "1" -- "*" Reservation : books >
+Reservation "1" -- "*" Reminder : triggers >
+Structure "1" -- "*" Client : employs >
+
+' Audit logs apply to all entities (generic), not shown as direct relationship
+
+@enduml
