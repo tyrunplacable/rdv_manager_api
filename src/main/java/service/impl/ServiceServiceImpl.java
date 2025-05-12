@@ -1,7 +1,7 @@
 package service.impl;
 
 import domain.model.ServiceEntity;
-import mapper.ServiceMapper;
+import mapper.ServiceEntityMapper;
 import payload.request.CreateServiceRequest;
 import payload.request.UpdateServiceRequest;
 import payload.response.ServiceResponse;
@@ -19,7 +19,7 @@ import java.util.UUID;
 public class ServiceServiceImpl implements ServiceService {
 
     private final ServiceRepository repository;
-    private final ServiceMapper mapper;
+    private final ServiceEntityMapper mapper;
 
     @Override
     @Transactional
