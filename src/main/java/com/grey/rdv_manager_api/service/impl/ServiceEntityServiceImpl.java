@@ -10,14 +10,14 @@ import com.grey.rdv_manager_api.payload.request.CreateServiceRequest;
 import com.grey.rdv_manager_api.payload.request.UpdateServiceRequest;
 import com.grey.rdv_manager_api.payload.response.ServiceResponse;
 import com.grey.rdv_manager_api.repository.ServiceRepository;
-import com.grey.rdv_manager_api.service.ServiceService;
+import com.grey.rdv_manager_api.service.ServiceEntityService;
 
 import java.util.List;
 import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class ServiceServiceImpl implements ServiceService {
+public class ServiceEntityServiceImpl implements ServiceEntityService {
 
     private final ServiceRepository repository;
     private final ServiceEntityMapper mapper;

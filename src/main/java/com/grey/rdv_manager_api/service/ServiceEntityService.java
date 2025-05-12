@@ -7,7 +7,7 @@ import com.grey.rdv_manager_api.payload.request.CreateServiceRequest;
 import com.grey.rdv_manager_api.payload.request.UpdateServiceRequest;
 import com.grey.rdv_manager_api.payload.response.ServiceResponse;
 
-public interface ServiceService {
+public interface ServiceEntityService {
     ServiceResponse create(CreateServiceRequest request);
     ServiceResponse getById(UUID id);
     List<ServiceResponse> getAll();

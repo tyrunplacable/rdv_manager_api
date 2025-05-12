@@ -11,7 +11,7 @@ import org.springframework.web.filter.CorsFilter;
 
 import java.util.Collections;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.grey.rdv_manager_api")
 @EnableMongoRepositories
 public class RdvManagerApi {
     public static void main(String[] args) {
@@ -19,7 +19,8 @@ public class RdvManagerApi {
     }
 
     @Bean
-    public FilterRegistrationBean<CorsFilter> simpleCorsFilter(){
+    @SuppressWarnings("unchecked")
+    public FilterRegistrationBean simpleCorsFilter(){
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
@@ -27,7 +28,7 @@ public class RdvManagerApi {
         config.setAllowedMethods(Collections.singletonList("*"));
         config.setAllowedHeaders(Collections.singletonList("*"));
         source.registerCorsConfiguration("/**", config);
-        FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>(new CorsFilter(source));
+        FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
         bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
         return bean;
     }

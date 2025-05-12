@@ -1,12 +1,12 @@
 server:
-  port: [LOCAL_PORT]
+  port: 8383
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
 spring:
   data:
     mongodb:
-      uri: [YOUR_MONGO_URI]
+      uri: mongodb+srv://bvrjnhl:IxSi1MduzkPqvvhx@cluster0.erw7h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
       database: rdv_manager_db
   profiles:
     active: debug

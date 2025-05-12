@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import com.grey.rdv_manager_api.payload.request.CreateServiceRequest;
 import com.grey.rdv_manager_api.payload.request.UpdateServiceRequest;
 import com.grey.rdv_manager_api.payload.response.ServiceResponse;
-import com.grey.rdv_manager_api.service.ServiceService;
+import com.grey.rdv_manager_api.service.ServiceEntityService;
 
 import java.util.List;
 import java.util.UUID;
@@ -19,7 +19,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class ServiceController {
 
-    private final ServiceService serviceService;
+    private final ServiceEntityService serviceService;
 
     @PostMapping
     public ResponseEntity<ServiceResponse> createService(
