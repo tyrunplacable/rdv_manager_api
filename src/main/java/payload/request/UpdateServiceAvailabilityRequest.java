@@ -1,10 +1,11 @@
 package payload.request;
 
 import java.time.LocalTime;
-import java.time.DayOfWeek;
+
+import domain.enums.Weekday;
 
 public record UpdateServiceAvailabilityRequest(
-    DayOfWeek dayOfWeek,
+    Weekday dayOfWeek,
     LocalTime startTime,
     LocalTime endTime
 ) {}
